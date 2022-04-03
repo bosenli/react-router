@@ -8,6 +8,7 @@ import About from './screens/About';
 import Post from './screens/Post';
 import NoMatch from './screens/NoMatch';
 
+
 //install router dependency:  npm install --save react-router-dom  
 //step 2 : set up index.js
 //step 3 step up components and screens
@@ -47,7 +48,7 @@ function App() {
         <Route path="/" element = {<Home />} />
         <Route path="/about" element = {<About />} />
         <Route path="/posts" element = {<Posts posts= {data}/>} />
-        {/* making copy of the data */}
+        {/* making copy of the data , rendering post as well at Route, passing in Props that is ...data to Post screen */}
         <Route path="/posts/:post_id" element = {<Post {...data} /> }/> 
         <Route path="*" element= {<NoMatch />} />
       </Routes>

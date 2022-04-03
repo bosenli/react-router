@@ -13,9 +13,7 @@ export default function Posts(props) {
 
   const renderPosts = () => {
     const { history } = props;
-
     console.log(history);
-
     return posts.map((post, index) => {
         //go through each post 
       return (
